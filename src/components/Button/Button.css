@@ -1,0 +1,15 @@
+.button{
+  font-size: 35px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  margin: 5px;
+  transition: color .1s ease-in-out, transform .1s ease-in-out;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.button:hover{
+  transform: scale(1.05);
+  color: rgb(224, 224, 224);
+}
