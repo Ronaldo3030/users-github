@@ -10,8 +10,8 @@ const Users = (props) => {
 
   const openModal = async (cardInfo) => {
     setShowModal(true)
-    const response = await axios.get(`http://localhost:3000/api/users/${cardInfo.login}/details`)
-    const responseRepos = await axios.get(`http://localhost:3000/api/users/${cardInfo.login}/repos`)
+    const response = await axios.get(`https://api-users-github.onrender.com/api/users/${cardInfo.login}/details`)
+    const responseRepos = await axios.get(`https://api-users-github.onrender.com/api/users/${cardInfo.login}/repos`)
     //PUT IN RESPONSE FOR USER, REPOS
     response.data["repos"] = responseRepos.data
     setSelectedCardInfo(response.data)

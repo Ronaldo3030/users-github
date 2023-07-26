@@ -27,7 +27,7 @@ function App() {
 
   const getUsers = async (since, prev) => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/users?since=${since}`);
+      const response = await axios.get(`https://api-users-github.onrender.com/api/users?since=${since}`);
       const max = response.data.length
       const first = response.data[0].id
       if(prev === true){
@@ -47,7 +47,7 @@ function App() {
 
   const handleSearch = async (value) => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/users/${value}`);
+      const response = await axios.get(`https://api-users-github.onrender.com/api/users/${value}`);
       setUsers(response.data);
     } catch (error) {
       console.log(error);
