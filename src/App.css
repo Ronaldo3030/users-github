@@ -6,7 +6,6 @@
   height: 100vh;
   overflow: auto;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,6 +13,11 @@
 
 .container{
   padding: 50px;
+}
+
+.content{
+  width: 50%;
+  margin: 0 auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {

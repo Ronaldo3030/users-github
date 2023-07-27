@@ -49,6 +49,8 @@ function App() {
     try {
       const response = await axios.get(`https://api-users-github.onrender.com/api/users/${value}`);
       setUsers(response.data);
+      setLast(0)
+      setFirstUsers([])
     } catch (error) {
       console.log(error);
       setUsers([]);
@@ -66,7 +68,7 @@ function App() {
   return (
     <div className="App">
       <div className='container'>
-        <div style={{ width: "50%", margin: "0 auto" }}>
+        <div className='content'>
           <Input name="Procurar" placeholder="Digite um usuário" value={name} onChange={value => {
             setName(value);
             handleSearch(value);
@@ -75,8 +77,8 @@ function App() {
         {dataLoaded ? (
           <Users users={users} />
         ) : <Loading />}
-        {firstUsers.length > 1 && (<Button onClick={previous} name="Anterior" ><BsFillArrowLeftCircleFill /></Button>)}
-        <Button onClick={next} name="Próximo"><BsFillArrowRightCircleFill /></Button>
+        {users.length >= 30 && firstUsers.length > 1 && (<Button onClick={previous} name="Anterior" ><BsFillArrowLeftCircleFill /></Button>)}
+        {users.length >= 30 && (<Button onClick={next} name="Próximo"><BsFillArrowRightCircleFill /></Button>)}
       </div>
     </div>
   );
