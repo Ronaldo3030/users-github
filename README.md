@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Aplicação GitHub API Proxy - Front-End
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma aplicação web que mostra os dados dos usuários do GitHub de forma interativa e amigável. Ele foi desenvolvido usando React e está hospedado no site https://users-github.onrender.com/. Ele também usa a API proxy criada no back-end, que está hospedada no repositório https://github.com/Ronaldo3030/api-users-github.
 
-## Available Scripts
+## Como usar
+Para usar esta aplicação, você pode acessar o site https://users-github.onrender.com/ no seu navegador. Você vai ver uma tela com uma lista de usuários do GitHub, com o ID, o login e a foto de cada um. Você pode clicar em um usuário para ver mais detalhes sobre ele, como a URL do perfil, a data de criação do login e os repositórios públicos que ele possui. Você também pode pesquisar por um usuário específico digitando o login dele no campo “Procurar”. Você pode navegar pela lista de usuários usando os botões “Anterior” e “Próximo”.
 
-In the project directory, you can run:
+## Funcionalidades
+A aplicação possui as seguintes funcionalidades:
 
-### `npm start`
+* Lista de usuários: Mostra uma lista de usuários do GitHub, usando a API do GitHub diretamente.
+* Detalhes do usuário: Mostra as informações detalhadas de um usuário específico, usando a API proxy criada no back-end.
+* Tabela de repositórios: Mostra uma tabela com os repositórios públicos de um usuário específico, usando a API proxy criada no back-end.
+* Pesquisa por usuário: Permite pesquisar por um usuário específico digitando o login dele no campo “Procurar”.
+* Paginação: Permite navegar pela lista de usuários usando os botões “Anterior” e “Próximo”.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Componentes
+A aplicação React foi organizada em componentes que estão dentro da pasta /src/components. Os componentes são os seguintes:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* App: O componente principal da aplicação, que renderiza os outros componentes e gerencia as rotas.
+* Button: O componente que mostra os botões “Anterior” e “Próximo” para navegar pela lista de usuários.
+* Card: O componente que mostra cada usuário na lista de usuários, com o ID, o login, a foto e um link para o perfil no GitHub.
+* Header: O componente que mostra o cabeçalho da aplicação, com o título e um link para voltar à tela inicial.
+* Id: O componente que mostra o ID de um usuário.
+* Input: O componente que mostra o campo “Procurar” para pesquisar por um usuário específico.
+* Loading: O componente que mostra uma animação de carregamento enquanto os dados dos usuários são buscados.
+* Modal: O componente que mostra uma janela modal com os detalhes de um usuário específico, incluindo a tabela de repositórios.
+* Tabela: O componente que mostra uma tabela com os repositórios públicos de um usuário específico, com o ID, o nome e o link para cada repositório.
+* Users: O componente que mostra a lista de usuários do GitHub, usando a API do GitHub diretamente.
